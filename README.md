@@ -1,3 +1,5 @@
+Task 1
+
 Design and implement a School Management System using OOP principles.
 
 Your task is to implement the following classes with their respective responsibilities:
@@ -52,3 +54,14 @@ Requirements:
     - Assign grades to students
     - Calculate GPA for students
     - Display information about students, teachers, and courses
+
+Task 2
+
+ERM - https://dbdiagram.io/d/67a76c7e263d6cf9a0791c65
+- Move your old classes to .old folder
+- Check out SQLAlchemy quickstart: https://docs.sqlalchemy.org/en/20/orm/quickstart.html
+- Use SQLite for now.
+- Create a `models` subforder with `base.py`, `course.py`, `student.py`, etc.
+- Declare all the models. Note that they should inherit from `Base` class and contain only field declarations. No methods should be declared in the models.
+- Explore a Mixin pattern in general: https://medium.com/@yanxingyang/usage-of-mixin-class-in-python-932b940db80 and for SQLAlchemy: https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/mixins.html
+- Implement a TimestampMixin that adds `created_at` and `updated_at` fields to the model.
