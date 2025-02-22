@@ -3,8 +3,6 @@ from sqlalchemy import Uuid, String, Integer, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from models.base import Base
-from models.schools.school import School
-from models.students.student_course import StudentCourse
 from models.timestamp_mixin import TimestampMixin
 
 @genpareto_gen()

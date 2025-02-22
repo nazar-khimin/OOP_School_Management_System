@@ -1,10 +1,8 @@
 from scipy.stats import genpareto_gen
-from sqlalchemy import Uuid, String, Integer, ForeignKey, ARRAY
+from sqlalchemy import Uuid, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from models.base import Base
-from models.course import Course
-from models.teachers.teacher import Teacher
 from models.timestamp_mixin import TimestampMixin
 
 @genpareto_gen()

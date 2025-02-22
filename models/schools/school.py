@@ -1,10 +1,8 @@
-from sqlalchemy import Uuid, String
+from sqlalchemy import String
 from sqlalchemy.orm import Mapped, relationship
 from sqlalchemy.testing.schema import mapped_column
 
 from models.base import Base
-from models.schools.school_course import SchoolCourse
-from models.students.student import Student
 from models.timestamp_mixin import TimestampMixin
 from utils.repr_generator import generate_repr
 
