@@ -2,7 +2,7 @@ from scipy.stats import genpareto_gen
 from sqlalchemy import Uuid, String, Integer, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
 
-from models.base import Base
+from models.database import Base
 from models.timestamp_mixin import TimestampMixin
 
 @genpareto_gen()
