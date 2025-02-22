@@ -3,6 +3,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from models.base import Base
 from models.schools.school_course import SchoolCourse
 from models.students.student_course import StudentCourse
+from models.teachers.teacher_course import TeacherCourse
 from models.timestamp_mixin import TimestampMixin
 from repr.repr_generator import generate_repr
 
@@ -17,3 +18,4 @@ class Course(Base, TimestampMixin):
 
     school_courses: Mapped[list['SchoolCourse']] = relationship('SchoolCourse', back_populates='course')
     student_courses: Mapped[list['StudentCourse']] = relationship('StudentCourse', back_populates='course')
+    teacher_courses: Mapped[list['TeacherCourse']] = relationship('TeacherCourse', back_populates='course')
