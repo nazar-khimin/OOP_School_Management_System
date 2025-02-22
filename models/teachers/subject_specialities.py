@@ -1,5 +1,6 @@
-from sqlalchemy import String, Enum
+from sqlalchemy import Enum as SQLAlchemyEnum
 from sqlalchemy.orm import Mapped, mapped_column
+from enum import Enum
 
 from models.base import Base
 
@@ -14,5 +15,4 @@ class SubjectSpecialties(Enum):
 
 class SubjectSpecialty(Base):
     __tablename__ = 'subject_specialties'
-    id: Mapped[str] = mapped_column(String, primary_key=True)
-    name: Mapped[SubjectSpecialties] = mapped_column(Enum(SubjectSpecialties))
+    name: Mapped[SubjectSpecialties] = mapped_column(SQLAlchemyEnum(SubjectSpecialties))
