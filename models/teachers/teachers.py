@@ -5,7 +5,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from models.base import Base
 from models.timestamp_mixin import TimestampMixin
 
-@genpareto_gen
+@genpareto_gen()
 class Teachers(Base, TimestampMixin):
     __tablename__ = "teachers"
     name: Mapped[str] = mapped_column(String(30))
