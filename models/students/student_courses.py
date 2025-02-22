@@ -9,6 +9,3 @@ from models.timestamp_mixin import TimestampMixin
 class Students(Base, TimestampMixin):
     course_id: Mapped[str] = mapped_column(Uuid, ForeignKey('courses.id'))
     students_id: Mapped[str] = mapped_column(Uuid, ForeignKey('students.id'))
-    teachers_id: Mapped[str] = mapped_column(Uuid, ForeignKey('teachers.id'))
-    school_id: Mapped[str] = mapped_column(Uuid, ForeignKey('schools.id'))    #
-    grade: Mapped[int] = mapped_column(Integer)
