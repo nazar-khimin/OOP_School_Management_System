@@ -1,6 +1,4 @@
-from tokenize import String
-
-from sqlalchemy import Uuid
+from sqlalchemy import Uuid, String
 from sqlalchemy.orm import Mapped
 from sqlalchemy.testing.schema import mapped_column
 
@@ -12,4 +10,4 @@ from repr.repr_generator import generate_repr
 class School(Base, TimestampMixin):
     __tablename__ = "schools"
     id: Mapped[int] = mapped_column(Uuid, primary_key=True)
-    name: Mapped[str] = mapped_column(String)
+    name: Mapped[str] = mapped_column(String(30))
