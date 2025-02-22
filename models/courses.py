@@ -9,7 +9,6 @@ from repr.repr_generator import generate_repr
 @generate_repr()
 class Course(Base, TimestampMixin):
     __tablename__ = 'courses'
-    id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(30))
     teacher_id: Mapped[str] = mapped_column(Uuid, ForeignKey('teachers.id'))
     max_capacity: Mapped[int] = mapped_column(Integer)
