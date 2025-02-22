@@ -1,11 +1,11 @@
-from scipy.stats import genpareto_gen
 from sqlalchemy import Uuid, String, Integer, ForeignKey, ARRAY
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from models.base import Base
 from models.timestamp_mixin import TimestampMixin
+from utils.repr_generator import generate_repr
 
-@genpareto_gen()
+@generate_repr()
 class Teacher(Base, TimestampMixin):
     __tablename__ = "teachers"
     name: Mapped[str] = mapped_column(String(30))
