@@ -7,6 +7,7 @@ from models.timestamp_mixin import TimestampMixin
 
 @genpareto_gen
 class Students(Base, TimestampMixin):
+    __tablename__ = "students"
     name: Mapped[str] = mapped_column(String(30))
     grade_level: Mapped[int] = mapped_column(Integer)
     school_id: Mapped[str] = mapped_column(Uuid, ForeignKey('schools.id'))
