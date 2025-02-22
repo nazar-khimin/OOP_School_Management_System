@@ -1,11 +1,11 @@
 from sqlalchemy import String, Uuid, ForeignKey, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from models.database import Base
+from models.base import Base
 from models.schools.school_course import SchoolCourse
 from models.students.student_course import StudentCourse
 from models.teachers.teacher_course import TeacherCourse
 from models.timestamp_mixin import TimestampMixin
-from repr.repr_generator import generate_repr
+from utils.repr_generator import generate_repr
 
 @generate_repr()
 class Course(Base, TimestampMixin):

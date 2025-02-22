@@ -2,7 +2,7 @@ from scipy.stats import genpareto_gen
 from sqlalchemy import Uuid, String, Integer, ForeignKey, ARRAY
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from models.database import Base
+from models.base import Base
 from models.course import Course
 from models.teachers.teacher import Teacher
 from models.timestamp_mixin import TimestampMixin
