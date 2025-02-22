@@ -7,6 +7,6 @@ from models.timestamp_mixin import TimestampMixin
 from repr.repr_generator import generate_repr
 
 @generate_repr()
-class School(Base, TimestampMixin):
+class Schools(Base, TimestampMixin):
     __tablename__ = "schools"
     name: Mapped[str] = mapped_column(String(30))

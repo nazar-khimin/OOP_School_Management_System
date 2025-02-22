@@ -7,7 +7,7 @@ from models.timestamp_mixin import TimestampMixin
 from repr.repr_generator import generate_repr
 
 @generate_repr()
-class Course(Base, TimestampMixin):
+class Courses(Base, TimestampMixin):
     __tablename__ = 'courses'
     name: Mapped[str] = mapped_column(String(30))
     teacher_id: Mapped[str] = mapped_column(Uuid, ForeignKey('teachers.id'))
