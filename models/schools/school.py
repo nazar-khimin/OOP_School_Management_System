@@ -1,6 +1,5 @@
 from sqlalchemy import String
-from sqlalchemy.orm import Mapped, relationship
-from sqlalchemy.testing.schema import mapped_column
+from sqlalchemy.orm import Mapped, relationship, mapped_column
 
 from models.base import Base
 from models.timestamp_mixin import TimestampMixin
