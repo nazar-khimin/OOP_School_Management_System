@@ -10,7 +10,7 @@ class Student(Base, TimestampMixin):
     __tablename__ = "students"
     name: Mapped[str] = mapped_column(String(30))
     grade_level: Mapped[int] = mapped_column(Integer)
-    school_id: Mapped[str] = mapped_column(Uuid, ForeignKey('schools.id'))
+    school_id: Mapped[str] = mapped_column(String, ForeignKey('schools.id'))
 
-    school: Mapped['School'] = relationship('Schools', back_populates='students')
+    school: Mapped['School'] = relationship('School', back_populates='students')
     student_courses: Mapped[list['StudentCourse']] = relationship('StudentCourse', back_populates='student')

@@ -1,4 +1,4 @@
-from sqlalchemy import String, Uuid, ForeignKey, Integer
+from sqlalchemy import String, ForeignKey, Integer
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from models.base import Base
 from models.timestamp_mixin import TimestampMixin
@@ -8,7 +8,7 @@ from utils.repr_generator import generate_repr
 class Course(Base, TimestampMixin):
     __tablename__ = 'courses'
     name: Mapped[str] = mapped_column(String(30))
-    teacher_id: Mapped[str] = mapped_column(Uuid, ForeignKey('teachers.id'))
+    teacher_id: Mapped[str] = mapped_column(String, ForeignKey('teachers.id'))
     max_capacity: Mapped[int] = mapped_column(Integer)
     required_grade_level: Mapped[int] = mapped_column(Integer)
     credits: Mapped[int] = mapped_column(Integer)
